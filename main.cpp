@@ -11,7 +11,11 @@ long getSum(std::vector<int> num)
     }
     return sum;
 }
-
+long getAverage(std::vector<int> num)
+{
+    long sum = getSum(num);
+    return sum / VECTOR_LENGTH;
+}
 int main()
 {
     std::cout << "Vector of Numbers: ";
@@ -23,4 +27,6 @@ int main()
     }
     std::cout << "\nCalculating sum ........\n";
     std::cout << "Sum is " << getSum(num) << "\n";
+    std::cout << "Average is " << getAverage(num) << "\n";
 }
+
