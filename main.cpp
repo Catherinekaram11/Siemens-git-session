@@ -11,7 +11,18 @@ long getSum(std::vector<int> num)
     }
     return sum;
 }
-
+long getMin (std::vector <int> num)
+{
+    long min = num[0];
+    for( int i=1 ; i<VECTOR_LENGTH ; i++)
+    {
+        if (num[i] < min)
+        {
+            min = num[i];
+        }
+    }
+    return min;
+}
 int main()
 {
     std::cout << "Vector of Numbers: ";
@@ -23,4 +34,6 @@ int main()
     }
     std::cout << "\nCalculating sum ........\n";
     std::cout << "Sum is " << getSum(num) << "\n";
+    std::cout << "Min is " << getMin(num) << "\n";
 }
+
