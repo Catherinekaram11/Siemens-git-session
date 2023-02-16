@@ -15,6 +15,7 @@ long getAverage(std::vector<int> num)
 {
     long sum = getSum(num);
     return sum / VECTOR_LENGTH;
+}
 long getMin (std::vector <int> num)
 {
     long min = num[0];
