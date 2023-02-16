@@ -15,6 +15,17 @@ long getAverage(std::vector<int> num)
 {
     long sum = getSum(num);
     return sum / VECTOR_LENGTH;
+long getMin (std::vector <int> num)
+{
+    long min = num[0];
+    for( int i=1 ; i<VECTOR_LENGTH ; i++)
+    {
+        if (num[i] < min)
+        {
+            min = num[i];
+        }
+    }
+    return min;
 }
 int main()
 {
@@ -28,5 +39,6 @@ int main()
     std::cout << "\nCalculating sum ........\n";
     std::cout << "Sum is " << getSum(num) << "\n";
     std::cout << "Average is " << getAverage(num) << "\n";
+    std::cout << "Min is " << getMin(num) << "\n";
 }
 
